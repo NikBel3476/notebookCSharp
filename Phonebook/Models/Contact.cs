@@ -1,4 +1,4 @@
-﻿namespace ContactList;
+﻿namespace Phonebook.Models;
 
 public class Contact
 {
@@ -7,6 +7,6 @@ public class Contact
     
     public override string ToString()
     {
-        return $"{Name} {PhoneNumber}";
+        return $"{Name}-{PhoneNumber}";
     }
 }

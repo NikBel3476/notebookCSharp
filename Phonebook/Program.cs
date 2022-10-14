@@ -1,4 +1,6 @@
-﻿using ContactList;
+﻿using Phonebook;
+using Phonebook.Enums;
+using Phonebook.Models;
 
 var notebook = Notebook.GetInstance();
 string? errorMessage = null;
@@ -68,7 +70,7 @@ while (true)
                 Console.Write("Введите имя контакта: ");
                 string name = Console.ReadLine();
                 
-                var contact = await notebook.GetContactAsync(name);
+                var contact = await notebook.FindContactAsync(name);
                 if (contact == null)
                     errorMessage = "Контакт не найден";
                 else
@@ -94,7 +96,7 @@ while (true)
                 Console.Write("Введите имя контакта: ");
                 string name = Console.ReadLine();
                 
-                var contact = await notebook.GetContactAsync(name);
+                var contact = await notebook.FindContactAsync(name);
                 if (contact == null)
                     errorMessage = "Контакт не найден";
                 else
