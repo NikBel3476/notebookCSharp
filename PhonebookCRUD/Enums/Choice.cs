@@ -1,11 +1,11 @@
-﻿namespace Phonebook.Enums;
+﻿namespace PhonebookCRUD.Enums;
 
 /// <summary>
 /// Опции выбора команды ввода
 /// </summary>
 enum Choice
 {
-    ShowAll,
+    ShowAll = 1,
     Add,
     Update,
     Delete,
